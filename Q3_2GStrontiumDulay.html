@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Q3_2GStrontiumDulay</title>
+    
 </head>
 <body>
-    
+    <form method = "post" action = "submit" onsubmit = "return confirmSub()" onreset = "return confirmRes()">
+        <fieldset>
+
+            <label>
+                Input StudentID (Numerical):
+                <input type="number" name="studentID" required>
+            </label>
+
+            <label>
+                Input Student's Full Name (Text):
+                <input type="text" onblur = "checkVal(this)" name="name" required>
+            </label>
+
+            <label>
+                Input Student's Birthday (Date):
+                <input type="date" name="bday" required>
+            </label>
+
+            <label>
+                Input Student's Email Address (Text):
+                <input type="email" name="email" required>
+            </label>
+        </fieldset>
+
+        <fieldset>
+
+            <label>
+                Input Student's Mobile Phone:
+                <input type="text" onblur = "checkVal(this)" name="mobphone" required>
+            </label>
+
+            <label>
+                <select name = "gradelvl" required>
+                    <option value = ""> SELECT A GRADE LEVEL </option>
+                    <option value = "GR 7"> Grade 7 </option>
+                    <option value = "GR 8"> Grade 8 </option>
+                    <option value = "GR 9"> Grade 9 </option>
+                    <option value = "GR 10"> Grade 10 </option>
+                    <option value = "GR 11"> Grade 11 </option>
+                    <option value = "GR 12"> Grade 12 </option>
+                </select>
+            </label>
+
+            <label>
+                <select name = "club_org" required>
+                    <option value = ""> SELECT A CLUB/ORGANIZATION </option>
+                    <option value = "schischo"> The Science Scholar  </option>
+                    <option value = "sars"> SARS+ Research Club </option>
+                    <option value = "photo"> Exposure Photography Club </option>
+                    <option value = "ttrpg"> Intyale Tabletop Role-Playing Game Club </option>
+                    <option value = "soccer"> Labuyo Soccer Club </option>
+                    <option value = "sigasig"> Sigasig Taekwondo Club </option>
+                </select>
+            </label>
+
+            <label>
+                <input type = "radio" name = "livstatus" value = "Intern"> Press if you are an Intern
+            </label>
+
+            <label>
+                <input type = "radio" name = "livstatus" value = "Extern"> Press if you are an Extern
+            </label>
+
+            <textarea name = "reason" required>
+                Write here a short explanation of why you want to join this club/organization. 
+            </textarea>
+
+            <input class = button type = "submit" value = "Submit Form">
+            <input class = button type = "reset" value = "Reset Form">
+
+        </fieldset>
+
+    </form>
+
 </body>
+<script src = "index.js"> </script>
 </html>
